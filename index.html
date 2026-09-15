@@ -2,137 +2,298 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Sweet Crumbs Bakery offers freshly baked cakes, cupcakes, pastries, bread and custom cakes in Johannesburg.">
-    <meta name="keywords" content="Sweet Crumbs Bakery, bakery Johannesburg, cakes, cupcakes, pastries, custom cakes">
-    <meta name="author" content="Sweet Crumbs Bakery">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <title>Sweet Crumbs Bakery | Freshly Baked Happiness</title>
+    <meta name="description"
+          content="Sweet Crumbs Bakery offers freshly baked cakes, cupcakes, pastries, bread and custom cakes for celebrations and special occasions.">
+
+    <meta name="keywords"
+          content="Sweet Crumbs Bakery, bakery, cakes, cupcakes, pastries, bread, custom cakes, birthday cakes">
+
+    <meta name="author"
+          content="Sweet Crumbs Bakery">
+
+    <title>Sweet Crumbs Bakery | Freshly Baked With Love</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
     <!-- Header -->
     <header>
-        <div>
-            <h1>Sweet Crumbs Bakery</h1>
-            <p>Freshly Baked Happiness, Every Day.</p>
-            <img src="images/Logo.png" width="150" length="150">
-        </div>
+        <div class="container header-container">
 
-        <!-- Navigation -->
-        <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="custom-cakes.html">Custom Cakes</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+            <a href="index.html" class="logo">
+                Sweet Crumbs Bakery
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+                ☰
+            </button>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-list" id="navList">
+
+                    <li>
+                        <a href="index.html" class="active">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="products.html">
+                            Products
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="custom-cakes.html">
+                            Custom Cakes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="gallery.html">
+                            Gallery
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="testimonials.html">
+                            Testimonials
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="faq.html">
+                            FAQ
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
     </header>
 
 
-    <!-- Main Content -->
     <main>
 
         <!-- Hero Section -->
-        <section>
-            <h2>Welcome to Sweet Crumbs Bakery</h2>
+        <section class="hero">
 
-            <p>
-                Discover freshly baked treats made with care, quality ingredients
-                and a passion for creating delicious moments.
-            </p>
+            <div class="container">
 
-            <a href="products.html">Explore Our Products</a>
-            <a href="custom-cakes.html">Order a Custom Cake</a>
+                <div class="hero-content">
+
+                    <h1>
+                        Freshly Baked With Love
+                    </h1>
+
+                    <p>
+                        Welcome to Sweet Crumbs Bakery, where delicious
+                        treats are freshly baked for every celebration,
+                        special moment and everyday craving.
+                    </p>
+
+                    <a href="products.html" class="btn btn-primary">
+                        Explore Our Products
+                    </a>
+
+                    <a href="custom-cakes.html" class="btn btn-secondary">
+                        Order a Custom Cake
+                    </a>
+
+                </div>
+
+            </div>
+
         </section>
 
 
         <!-- Introduction -->
-        <section>
-            <h2>Made Fresh. Made With Love.</h2>
+        <section class="intro">
 
-            <p>
-                At Sweet Crumbs Bakery, we believe that every celebration deserves
-                something delicious. From beautifully decorated cakes and cupcakes
-                to freshly baked bread and pastries, we create treats for everyday
-                moments and special occasions.
-            </p>
+            <div class="container">
 
-            <a href="about.html">Learn More About Us</a>
+                <div class="section-heading">
+
+                    <h2>
+                        Welcome to Sweet Crumbs
+                    </h2>
+
+                    <p>
+                        Your local destination for delicious,
+                        freshly baked treats.
+                    </p>
+
+                </div>
+
+                <div class="intro-content">
+
+                    <p>
+                        At Sweet Crumbs Bakery, we believe that every
+                        celebration deserves something delicious.
+                        From beautifully decorated cakes to freshly
+                        baked bread and pastries, our products are
+                        prepared with care and attention to detail.
+                    </p>
+
+                    <p>
+                        Whether you are celebrating a birthday,
+                        milestone or simply looking for something
+                        sweet, we have something for everyone.
+                    </p>
+
+                </div>
+
+            </div>
+
         </section>
 
 
         <!-- Featured Products -->
         <section>
-            <h2>Our Favourite Treats</h2>
 
-            <article>
-                <h3>Celebration Cakes</h3>
-                <p>
-                    Beautifully crafted cakes for birthdays, celebrations and
-                    special occasions.
-                </p>
-                <a href="products.html">View Cakes</a>
-            </article>
+            <div class="container">
 
-            <article>
-                <h3>Cupcakes</h3>
-                <p>
-                    Delicious cupcakes available in a variety of flavours and
-                    designs.
-                </p>
-                <a href="products.html">View Cupcakes</a>
-            </article>
+                <div class="section-heading">
 
-            <article>
-                <h3>Fresh Pastries</h3>
-                <p>
-                    Freshly baked pastries made for breakfast, snacks and
-                    everything in between.
-                </p>
-                <a href="products.html">View Pastries</a>
-            </article>
+                    <h2>
+                        Our Favourites
+                    </h2>
+
+                    <p>
+                        Discover some of the treats our customers
+                        love most.
+                    </p>
+
+                </div>
+
+                <div class="card-grid">
+
+                    <article class="card">
+
+                        <div class="card-content">
+
+                            <h3>
+                                Celebration Cakes
+                            </h3>
+
+                            <p>
+                                Beautifully decorated cakes created
+                                for birthdays, anniversaries and
+                                other special occasions.
+                            </p>
+
+                            <a href="custom-cakes.html"
+                               class="card-link">
+                                Explore Custom Cakes →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <div class="card-content">
+
+                            <h3>
+                                Cupcakes
+                            </h3>
+
+                            <p>
+                                Soft, delicious cupcakes available
+                                in a variety of flavours and
+                                decorations.
+                            </p>
+
+                            <a href="products.html"
+                               class="card-link">
+                                View Cupcakes →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <div class="card-content">
+
+                            <h3>
+                                Fresh Pastries
+                            </h3>
+
+                            <p>
+                                Freshly baked pastries made to bring
+                                a little sweetness to your day.
+                            </p>
+
+                            <a href="products.html"
+                               class="card-link">
+                                View Products →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
         </section>
 
 
-        <!-- Custom Cakes Call-to-Action -->
-        <section>
-            <h2>Have Something Special in Mind?</h2>
+        <!-- Call To Action -->
+        <section class="cta">
 
-            <p>
-                Let us create a custom cake designed especially for your
-                celebration.
-            </p>
+            <div class="container">
 
-            <a href="custom-cakes.html">Request a Custom Cake</a>
-        </section>
+                <div class="cta-content">
 
+                    <h2>
+                        Planning Something Special?
+                    </h2>
 
-        <!-- Contact Preview -->
-        <section>
-            <h2>Visit or Contact Us</h2>
+                    <p>
+                        Let Sweet Crumbs Bakery help make your
+                        celebration memorable with a custom cake
+                        designed especially for you.
+                    </p>
 
-            <p>
-                Have a question or want to place an order? Get in touch with
-                our team.
-            </p>
+                    <a href="custom-cakes.html"
+                       class="btn btn-primary">
+                        Start Your Cake Enquiry
+                    </a>
 
-            <address>
-                Johannesburg, South Africa<br>
-                Email:
-                <a href="mailto:info@sweetcrumbs.co.za">
-                    info@sweetcrumbs.co.za
-                </a>
-            </address>
+                </div>
 
-            <a href="contact.html">Contact Sweet Crumbs</a>
+            </div>
+
         </section>
 
     </main>
@@ -140,15 +301,89 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Sweet Crumbs Bakery. All rights reserved.</p>
 
-        <nav aria-label="Footer navigation">
-            <a href="index.html">Home</a> |
-            <a href="about.html">About Us</a> |
-            <a href="products.html">Products</a> |
-            <a href="contact.html">Contact</a>
-        </nav>
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+                    <h3>
+                        Sweet Crumbs Bakery
+                    </h3>
+
+                    <p>
+                        Freshly baked treats made with care
+                        for every occasion.
+                    </p>
+                </div>
+
+
+                <div>
+                    <h3>
+                        Quick Links
+                    </h3>
+
+                    <p>
+                        <a href="about.html">About Us</a>
+                    </p>
+
+                    <p>
+                        <a href="products.html">Products</a>
+                    </p>
+
+                    <p>
+                        <a href="custom-cakes.html">Custom Cakes</a>
+                    </p>
+
+                    <p>
+                        <a href="contact.html">Contact</a>
+                    </p>
+                </div>
+
+
+                <div>
+                    <h3>
+                        Contact
+                    </h3>
+
+                    <p>
+                        Email:
+                        info@sweetcrumbsbakery.co.za
+                    </p>
+
+                    <p>
+                        Phone:
+                        012 345 6789
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy;
+                    <span id="currentYear"></span>
+                    Sweet Crumbs Bakery.
+                    All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
     </footer>
+
+
+    <!-- Back To Top Button -->
+    <button id="backToTop"
+            aria-label="Back to top">
+        ↑
+    </button>
+
+
+    <script src="js/script.js"></script>
 
 </body>
 </html>
