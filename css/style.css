@@ -213,6 +213,19 @@ header {
     color: var(--dark-color);
 }
 
+/* ---------- CTA Button Contrast ---------- */
+
+.cta .btn-secondary {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border-color: var(--white);
+}
+
+.cta .btn-secondary:hover {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+}
+
 /* ---------- General Sections ---------- */
 
 section {
@@ -535,6 +548,12 @@ footer a:hover {
 .form-group select.error,
 .form-group textarea.error {
     border-color: #b3261e;
+}
+
+.form-group input.error:focus,
+.form-group select.error:focus,
+.form-group textarea.error:focus {
+    outline: 3px solid rgba(179, 38, 30, 0.2);
 }
 
 .error-message {
@@ -1032,6 +1051,21 @@ footer a:hover {
 
     .about-highlight {
         padding: 1.5rem;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
     }
 
 }

@@ -30,6 +30,29 @@ The website aims to provide the bakery with an online presence where customers c
 - `js/` – JavaScript files
 - `images/` – Website images and other visual assets
 
+## Technologies Used
+
+- HTML5 – Semantic website structure and content
+- CSS3 – Responsive design, layout, typography and visual styling
+- JavaScript – Interactive navigation, FAQ accordion, form validation, back-to-top functionality and geolocation
+- Git – Version control
+- GitHub – Remote repository and project backup
+
+## Website Features
+
+- Responsive multi-page bakery website
+- Mobile navigation menu
+- Custom cake enquiry form
+- Contact form with client-side validation
+- Interactive FAQ accordion
+- Responsive product catalogue
+- Responsive image gallery
+- Customer testimonials section
+- Browser-based geolocation
+- Google Maps directions integration
+- Accessibility-focused navigation and form feedback
+- SEO metadata on individual pages
+
 ## References
 
 References used throughout the project will be added and updated here using the Harvard referencing style.

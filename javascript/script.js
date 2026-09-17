@@ -120,23 +120,53 @@ document.addEventListener("DOMContentLoaded", function () {
 
             question.addEventListener("click", function () {
 
-                const isExpanded =
-                    question.getAttribute("aria-expanded") === "true";
+                    const isExpanded =
+                        question.getAttribute("aria-expanded") === "true";
 
-                const answerId =
-                    question.getAttribute("aria-controls");
+                    /*
+                    * Close all other FAQ answers
+                    */
+                    faqQuestions.forEach(function (otherQuestion) {
 
-                const answer =
-                    document.getElementById(answerId);
+                        if (otherQuestion !== question) {
 
-                question.setAttribute(
-                    "aria-expanded",
-                    !isExpanded
-                );
+                            otherQuestion.setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
 
-                answer.hidden = isExpanded;
+                            const otherAnswerId =
+                                otherQuestion.getAttribute("aria-controls");
 
-            });
+                            const otherAnswer =
+                                document.getElementById(otherAnswerId);
+
+                            if (otherAnswer) {
+                                otherAnswer.hidden = true;
+                            }
+
+                        }
+
+                    });
+
+
+                    /*
+                    * Toggle the selected FAQ answer
+                    */
+                    const answerId =
+                        question.getAttribute("aria-controls");
+
+                    const answer =
+                        document.getElementById(answerId);
+
+                    question.setAttribute(
+                        "aria-expanded",
+                        !isExpanded
+                    );
+
+                    answer.hidden = isExpanded;
+
+                });
 
         });
 
