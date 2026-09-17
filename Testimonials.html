@@ -1,285 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="Read customer testimonials and experiences from Sweet Crumbs Bakery customers in Johannesburg.">
+          content="Read what customers have to say about Sweet Crumbs Bakery and their experience with our cakes and freshly baked treats.">
 
     <meta name="keywords"
-        content="Sweet Crumbs Bakery testimonials, bakery reviews Johannesburg, cake reviews, customer feedback">
+          content="Sweet Crumbs Bakery reviews, bakery testimonials, cake reviews, customer feedback">
 
-    <meta name="author" content="Sweet Crumbs Bakery">
+    <meta name="author"
+          content="Sweet Crumbs Bakery">
 
     <title>Testimonials | Sweet Crumbs Bakery</title>
-</head>
 
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
 <body>
 
     <!-- Header -->
     <header>
+        <div class="container header-container">
 
-        <div>
+            <a href="index.html" class="logo">
+                Sweet Crumbs Bakery
+            </a>
 
-            <h1>Sweet Crumbs Bakery</h1>
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+                ☰
+            </button>
 
-            <p>
-                Freshly Baked Happiness, Every Day.
-            </p>
+            <nav aria-label="Main navigation">
+
+                <ul class="nav-list" id="navList">
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="products.html">
+                            Products
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="custom-cakes.html">
+                            Custom Cakes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="gallery.html">
+                            Gallery
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="testimonials.html" class="active">
+                            Testimonials
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="faq.html">
+                            FAQ
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- Page Introduction -->
+        <section class="page-hero">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <h1>
+                        Customer Testimonials
+                    </h1>
+
+                    <p>
+                        See what our customers have to say
+                        about Sweet Crumbs Bakery.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Testimonials -->
+        <section>
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <h2>
+                        What Our Customers Say
+                    </h2>
+
+                    <p>
+                        We value every customer and every piece
+                        of feedback we receive.
+                    </p>
+
+                </div>
+
+
+                <div class="testimonial-grid">
+
+                    <!-- Testimonial 1 -->
+                    <article class="testimonial-card">
+
+                        <div class="rating"
+                             aria-label="5 out of 5 stars">
+                            ★★★★★
+                        </div>
+
+                        <blockquote>
+                            "The birthday cake was absolutely
+                            beautiful and tasted even better.
+                            Everyone at the party loved it!"
+                        </blockquote>
+
+                        <p class="customer-name">
+                            — Thato M.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Testimonial 2 -->
+                    <article class="testimonial-card">
+
+                        <div class="rating"
+                             aria-label="5 out of 5 stars">
+                            ★★★★★
+                        </div>
+
+                        <blockquote>
+                            "The cupcakes were fresh, delicious
+                            and exactly what we requested.
+                            The service was excellent."
+                        </blockquote>
+
+                        <p class="customer-name">
+                            — Lerato K.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Testimonial 3 -->
+                    <article class="testimonial-card">
+
+                        <div class="rating"
+                             aria-label="4 out of 5 stars">
+                            ★★★★☆
+                        </div>
+
+                        <blockquote>
+                            "Sweet Crumbs helped us with treats
+                            for our graduation celebration.
+                            Everything looked amazing."
+                        </blockquote>
+
+                        <p class="customer-name">
+                            — Kabelo R.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Testimonial 4 -->
+                    <article class="testimonial-card">
+
+                        <div class="rating"
+                             aria-label="5 out of 5 stars">
+                            ★★★★★
+                        </div>
+
+                        <blockquote>
+                            "The pastries were fresh and delicious.
+                            I will definitely be ordering from
+                            Sweet Crumbs again."
+                        </blockquote>
+
+                        <p class="customer-name">
+                            — Naledi P.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+        <section class="cta">
+
+            <div class="container">
+
+                <div class="cta-content">
+
+                    <h2>
+                        Have You Tried Sweet Crumbs?
+                    </h2>
+
+                    <p>
+                        Explore our products or enquire about
+                        your own custom cake.
+                    </p>
+
+                    <a href="products.html"
+                       class="btn btn-primary">
+                        View Our Products
+                    </a>
+
+                    <a href="custom-cakes.html"
+                       class="btn btn-secondary">
+                        Order a Custom Cake
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+
+                    <h3>
+                        Sweet Crumbs Bakery
+                    </h3>
+
+                    <p>
+                        Freshly baked treats made with care
+                        for every occasion.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Quick Links
+                    </h3>
+
+                    <p>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="products.html">
+                            Products
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="custom-cakes.html">
+                            Custom Cakes
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Contact
+                    </h3>
+
+                    <p>
+                        Email:
+                        info@sweetcrumbsbakery.co.za
+                    </p>
+
+                    <p>
+                        Phone:
+                        012 345 6789
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy;
+                    <span id="currentYear"></span>
+                    Sweet Crumbs Bakery.
+                    All rights reserved.
+                </p>
+
+            </div>
 
         </div>
 
-        <!---Main Navigation-->
-        <nav aria-label="Main navigation">
-            <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="about.html">About us</a>
-                </li>
-                <li>
-                    <a href="products.html">Products</a>
-                </li>
-                <li>
-                    <a href="custom-cakes.html">Custom Cakes</a>
-                </li>
-                <li>
-                    <a href="gallery.html">Gallery</a>
-                </li>
-                <li>
-                    <a href="Testimonials.html">Testimonials</a>
-                </li>
-                <li>
-                    <a href="faq.html">FAQ</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
-    <!----Main Content-->
-    <main>
-
-        <!---Introduction-->
-        <section>
-            <h2>What Our Customers Say</h2>
-            <p>
-                At Sweet Crumbs Bakery, we believe that our customers are at
-                the heart of everything
-            </p>
-            <p>
-                Here are some examples of the feedback we receive from
-                customers eho have enjoyed our products and services.
-            </p>
-        </section>
-
-        <!---Customer Testimonials-->
-         <section>
-
-            <h2>Customer Reviews</h2>
-
-
-            <article>
-
-                <h3>Birthday Cake</h3>
-
-                <blockquote>
-
-                    <p>
-                        "The birthday cake looked exactly like the design I
-                        requested and tasted amazing. Everyone at the party
-                        loved it!"
-                    </p>
-
-                    <footer>
-                        — Lerato, Johannesburg
-                    </footer>
-
-                </blockquote>
-
-            </article>
-
-
-
-            <article>
-
-                <h3>Custom Celebration Cake</h3>
-
-                <blockquote>
-
-                    <p>
-                        "Sweet Crumbs made the whole process so easy. They
-                        listened to my ideas and created a beautiful cake
-                        for my celebration."
-                    </p>
-
-                    <footer>
-                        — Thabo, Johannesburg
-                    </footer>
-
-                </blockquote>
-
-            </article>
-
-
-
-            <article>
-
-                <h3>Cupcakes</h3>
-
-                <blockquote>
-
-                    <p>
-                        "The cupcakes were fresh, beautifully decorated and
-                        exactly what we needed for our event. I would
-                        definitely order again."
-                    </p>
-
-                    <footer>
-                        — Naledi, Johannesburg
-                    </footer>
-
-                </blockquote>
-
-            </article>
-
-
-
-            <article>
-
-                <h3>Pastries</h3>
-
-                <blockquote>
-
-                    <p>
-                        "I ordered a selection of pastries for a family
-                        breakfast and everyone enjoyed them. Everything
-                        tasted fresh."
-                    </p>
-
-                    <footer>
-                        — Kabelo, Johannesburg
-                    </footer>
-
-                </blockquote>
-
-            </article>
-
-        </section>
-
-
-
-        <!-- Why Customers Choose Us -->
-        <section>
-
-            <h2>Why Customers Choose Sweet Crumbs</h2>
-
-            <ul>
-
-                <li>
-                    Freshly prepared baked products.
-                </li>
-
-                <li>
-                    Creative and personalised cake designs.
-                </li>
-
-                <li>
-                    Friendly customer service.
-                </li>
-
-                <li>
-                    A variety of products for different occasions.
-                </li>
-
-                <li>
-                    Attention to customer requirements.
-                </li>
-
-            </ul>
-
-        </section>
-
-
-
-        <!-- Custom Cake CTA -->
-        <section>
-
-            <h2>Let Us Create Something Special For You</h2>
-
-            <p>
-                Planning a birthday, graduation, wedding or another special
-                occasion? Tell us what you have in mind and we'll work with
-                you to create a custom cake.
-            </p>
-
-            <a href="custom-cakes.html">
-                Request a Custom Cake
-            </a>
-
-        </section>
-
-
-
-        <!-- Contact CTA -->
-        <section>
-
-            <h2>Have You Tried Sweet Crumbs?</h2>
-
-            <p>
-                Get in touch with us to place an order or enquire about
-                our products.
-            </p>
-
-            <a href="contact.html">
-                Contact Us
-            </a>
-
-        </section>
-    </main>
-        <!-- Footer -->
-    <footer>
-
-        <p>
-            &copy; 2026 Sweet Crumbs Bakery. All rights reserved.
-        </p>
-
-
-        <nav aria-label="Footer navigation">
-
-            <a href="index.html">
-                Home
-            </a>
-
-            |
-
-            <a href="about.html">
-                About Us
-            </a>
-
-            |
-
-            <a href="products.html">
-                Products
-            </a>
-
-            |
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-        </nav>
-
     </footer>
 
-</body>
 
+    <!-- Back To Top -->
+    <button id="backToTop"
+            aria-label="Back to top">
+        ↑
+    </button>
+
+
+    <script src="js/script.js"></script>
+
+</body>
 </html>

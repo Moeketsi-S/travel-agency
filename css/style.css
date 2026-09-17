@@ -567,6 +567,50 @@ footer a:hover {
     border: 1px solid #e3a29d;
 }
 
+/* ---------- Testimonials Page ---------- */
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.rating {
+    color: var(--accent-color);
+    font-size: 1.4rem;
+    letter-spacing: 0.15rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card blockquote {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--text-color);
+    margin-bottom: 1.2rem;
+}
+
+.customer-name {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0;
+}
+
 /* ---------- Responsive Design ---------- */
 
 @media (max-width: 900px) {
@@ -592,6 +636,14 @@ footer a:hover {
 
     .header-container {
         min-height: 65px;
+    }
+
+    .testimonial-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-card{
+        padding: 1.5rem;
     }
 
     .cake-form{
