@@ -141,6 +141,298 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
     }
+
+        /* ---------- Contact Form Validation ---------- */
+
+    const contactForm = document.getElementById("contactForm");
+
+    if (contactForm) {
+
+        const contactName = document.getElementById("contactName");
+        const contactEmail = document.getElementById("contactEmail");
+        const contactSubject = document.getElementById("contactSubject");
+        const contactMessage = document.getElementById("contactMessage");
+
+        const contactFormMessage =
+            document.getElementById("contactFormMessage");
+
+        function showContactError(input, errorId, message) {
+            input.classList.add("error");
+            document.getElementById(errorId).textContent = message;
+        }
+
+        function clearContactError(input, errorId) {
+            input.classList.remove("error");
+            document.getElementById(errorId).textContent = "";
+        }
+
+        contactForm.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            let isValid = true;
+
+            /* Full Name */
+
+            if (contactName.value.trim() === "") {
+
+                showContactError(
+                    contactName,
+                    "contactNameError",
+                    "Please enter your full name."
+                );
+
+                isValid = false;
+
+            } else {
+
+                clearContactError(
+                    contactName,
+                    "contactNameError"
+                );
+
+            }
+
+
+            /* Email */
+
+            const emailPattern =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (contactEmail.value.trim() === "") {
+
+                showContactError(
+                    contactEmail,
+                    "contactEmailError",
+                    "Please enter your email address."
+                );
+
+                isValid = false;
+
+            } else if (
+                !emailPattern.test(contactEmail.value.trim())
+            ) {
+
+                showContactError(
+                    contactEmail,
+                    "contactEmailError",
+                    "Please enter a valid email address."
+                );
+
+                isValid = false;
+
+            } else {
+
+                clearContactError(
+                    contactEmail,
+                    "contactEmailError"
+                );
+
+            }
+
+
+            /* Subject */
+
+            if (contactSubject.value === "") {
+
+                showContactError(
+                    contactSubject,
+                    "contactSubjectError",
+                    "Please select a subject."
+                );
+
+                isValid = false;
+
+            } else {
+
+                clearContactError(
+                    contactSubject,
+                    "contactSubjectError"
+                );
+
+            }
+
+
+            /* Message */
+
+            if (contactMessage.value.trim() === "") {
+
+                showContactError(
+                    contactMessage,
+                    "contactMessageError",
+                    "Please enter your message."
+                );
+
+                isValid = false;
+
+            } else if (
+                contactMessage.value.trim().length < 10
+            ) {
+
+                showContactError(
+                    contactMessage,
+                    "contactMessageError",
+                    "Please enter at least 10 characters."
+                );
+
+                isValid = false;
+
+            } else {
+
+                clearContactError(
+                    contactMessage,
+                    "contactMessageError"
+                );
+
+            }
+
+
+            /* Form Result */
+
+            if (isValid) {
+
+                contactFormMessage.className =
+                    "form-message success";
+
+                contactFormMessage.textContent =
+                    "Thank you! Your message has been submitted successfully. We will get back to you soon.";
+
+                contactForm.reset();
+
+            } else {
+
+                contactFormMessage.className =
+                    "form-message error";
+
+                contactFormMessage.textContent =
+                    "Please correct the highlighted fields before submitting.";
+
+            }
+
+        });
+
+    }
+
+
+    /* ---------- Geolocation ---------- */
+
+    const findLocationButton =
+        document.getElementById("findLocation");
+
+    const locationMessage =
+        document.getElementById("locationMessage");
+
+    const mapContainer =
+        document.getElementById("mapContainer");
+
+
+    if (
+        findLocationButton &&
+        locationMessage &&
+        mapContainer
+    ) {
+
+        findLocationButton.addEventListener(
+            "click",
+            function () {
+
+                if (!navigator.geolocation) {
+
+                    locationMessage.textContent =
+                        "Geolocation is not supported by your browser.";
+
+                    return;
+
+                }
+
+
+                locationMessage.textContent =
+                    "Requesting your location...";
+
+
+                navigator.geolocation.getCurrentPosition(
+
+                    function (position) {
+
+                        const latitude =
+                            position.coords.latitude;
+
+                        const longitude =
+                            position.coords.longitude;
+
+
+                        locationMessage.textContent =
+                            `Your location was found successfully. Latitude: ${latitude.toFixed(5)}, Longitude: ${longitude.toFixed(5)}.`;
+
+
+                        const mapsUrl =
+                            `https://www.google.com/maps/dir/?api=1&origin=${latitude},${longitude}&destination=123%20Bakery%20Street,%20Johannesburg,%20Gauteng,%20South%20Africa`;
+
+
+                        mapContainer.innerHTML = `
+                            <div class="map-content">
+                                <span class="map-icon" aria-hidden="true">
+                                    📍
+                                </span>
+
+                                <h3>Location Found</h3>
+
+                                <p>
+                                    Your current location has been detected.
+                                </p>
+
+                                <a
+                                    href="${mapsUrl}"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="btn btn-primary">
+                                    Get Directions
+                                </a>
+                            </div>
+                        `;
+
+                    },
+
+                    function (error) {
+
+                        switch (error.code) {
+
+                            case error.PERMISSION_DENIED:
+
+                                locationMessage.textContent =
+                                    "Location access was denied. Please allow location access and try again.";
+
+                                break;
+
+                            case error.POSITION_UNAVAILABLE:
+
+                                locationMessage.textContent =
+                                    "Your location could not be determined. Please try again.";
+
+                                break;
+
+                            case error.TIMEOUT:
+
+                                locationMessage.textContent =
+                                    "The location request timed out. Please try again.";
+
+                                break;
+
+                            default:
+
+                                locationMessage.textContent =
+                                    "An unexpected error occurred while finding your location.";
+
+                        }
+
+                    }
+
+                );
+
+            }
+        );
+
+    }
             /* Name validation */
 
             if (name.value.trim() === "") {
