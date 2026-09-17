@@ -110,6 +110,37 @@ document.addEventListener("DOMContentLoaded", function () {
             let isValid = true;
 
 
+             /* ---------- FAQ Accordion ---------- */
+
+    const faqQuestions = document.querySelectorAll(".faq-question");
+
+    if (faqQuestions.length > 0) {
+
+        faqQuestions.forEach(function (question) {
+
+            question.addEventListener("click", function () {
+
+                const isExpanded =
+                    question.getAttribute("aria-expanded") === "true";
+
+                const answerId =
+                    question.getAttribute("aria-controls");
+
+                const answer =
+                    document.getElementById(answerId);
+
+                question.setAttribute(
+                    "aria-expanded",
+                    !isExpanded
+                );
+
+                answer.hidden = isExpanded;
+
+            });
+
+        });
+
+    }
             /* Name validation */
 
             if (name.value.trim() === "") {
