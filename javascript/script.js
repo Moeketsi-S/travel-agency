@@ -27,101 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     ? "Close navigation menu"
                     : "Open navigation menu"
             );
-        
-        // Gallery lightbox functionality
-    const galleryImages = document.querySelectorAll(".gallery-item img");
 
-    if (galleryImages.length > 0) {
-        const lightbox = document.createElement("div");
-        lightbox.className = "lightbox";
-        lightbox.setAttribute("role", "dialog");
-        lightbox.setAttribute("aria-modal", "true");
-        lightbox.setAttribute("aria-label", "Enlarged gallery image");
-        lightbox.setAttribute("aria-hidden", "true");
-
-        lightbox.innerHTML = `
-            <button class="lightbox-close" type="button"
-                aria-label="Close enlarged image">&times;</button>
-            <img class="lightbox-image" src="" alt="">
-            <p class="lightbox-caption"></p>
-        `;
-
-        document.body.appendChild(lightbox);
-
-        const lightboxImage = lightbox.querySelector(".lightbox-image");
-        const lightboxCaption = lightbox.querySelector(".lightbox-caption");
-        const closeButton = lightbox.querySelector(".lightbox-close");
-        let previousFocus = null;
-
-        function closeLightbox() {
-            lightbox.classList.remove("active");
-            lightbox.setAttribute("aria-hidden", "true");
-            document.body.style.overflow = "";
-            if (previousFocus) previousFocus.focus();
-        }
-
-        galleryImages.forEach(function (image) {
-            image.style.cursor = "zoom-in";
-            image.setAttribute("tabindex", "0");
-            image.setAttribute("role", "button");
-            image.setAttribute(
-                "aria-label",
-                "Enlarge image: " + image.alt
-            );
-
-            function openLightbox() {
-                previousFocus = image;
-                lightboxImage.src = image.src;
-                lightboxImage.style.width = "auto";
-                    lightboxImage.style.height = "auto";
-                    lightboxImage.style.maxWidth = "90vw";
-                    lightboxImage.style.maxHeight = "75vh";
-                lightboxImage.alt = image.alt;
-
-                const caption = image.closest("figure")
-                    ?.querySelector("figcaption");
-
-                lightboxCaption.textContent = caption
-                    ? caption.textContent
-                    : image.alt;
-
-                lightbox.classList.add("active");
-                lightbox.setAttribute("aria-hidden", "false");
-                document.body.style.overflow = "hidden";
-                closeButton.focus();
-            }
-
-            image.addEventListener("click", openLightbox);
-
-            image.addEventListener("keydown", function (event) {
-                if (event.key === "Enter" || event.key === " ") {
-                    event.preventDefault();
-                    openLightbox();
-                }
-            });
-        });
-
-        closeButton.addEventListener("click", closeLightbox);
-
-        lightbox.addEventListener("click", function (event) {
-            if (event.target === lightbox) {
-                closeLightbox();
-            }
-        });
-
-        document.addEventListener("keydown", function (event) {
-            if (
-                event.key === "Escape" &&
-                lightbox.classList.contains("active")
-            ) {
-                closeLightbox();
-            }
-        });
-    }
-
-            
-        });
-    }
 
 
     /* ---------- Dynamic Copyright Year ---------- */
@@ -761,5 +667,181 @@ document.addEventListener("DOMContentLoaded", function () {
 
         });
 
+    }
+         // Gallery lightbox functionality
+    const galleryImages = document.querySelectorAll(".gallery-item img");
+
+    if (galleryImages.length > 0) {
+        const lightbox = document.createElement("div");
+        lightbox.className = "lightbox";
+        lightbox.setAttribute("role", "dialog");
+        lightbox.setAttribute("aria-modal", "true");
+        lightbox.setAttribute("aria-label", "Enlarged gallery image");
+        lightbox.setAttribute("aria-hidden", "true");
+
+        lightbox.innerHTML = `
+            <button class="lightbox-close" type="button"
+                aria-label="Close enlarged image">&times;</button>
+            <img class="lightbox-image" src="" alt="">
+            <p class="lightbox-caption"></p>
+        `;
+
+        document.body.appendChild(lightbox);
+
+        const lightboxImage = lightbox.querySelector(".lightbox-image");
+        const lightboxCaption = lightbox.querySelector(".lightbox-caption");
+        const closeButton = lightbox.querySelector(".lightbox-close");
+        let previousFocus = null;
+
+        function closeLightbox() {
+            lightbox.classList.remove("active");
+            lightbox.setAttribute("aria-hidden", "true");
+            document.body.style.overflow = "";
+            if (previousFocus) previousFocus.focus();
+        }
+
+        galleryImages.forEach(function (image) {
+            image.style.cursor = "zoom-in";
+            image.setAttribute("tabindex", "0");
+            image.setAttribute("role", "button");
+            image.setAttribute(
+                "aria-label",
+                "Enlarge image: " + image.alt
+            );
+
+            function openLightbox() {
+                previousFocus = image;
+                lightboxImage.src = image.src;
+                lightboxImage.style.width = "auto";
+                    lightboxImage.style.height = "auto";
+                    lightboxImage.style.maxWidth = "90vw";
+                    lightboxImage.style.maxHeight = "75vh";
+                lightboxImage.alt = image.alt;
+
+                const caption = image.closest("figure")
+                    ?.querySelector("figcaption");
+
+                lightboxCaption.textContent = caption
+                    ? caption.textContent
+                    : image.alt;
+
+                lightbox.classList.add("active");
+                lightbox.setAttribute("aria-hidden", "false");
+                document.body.style.overflow = "hidden";
+                closeButton.focus();
+            }
+
+            image.addEventListener("click", openLightbox);
+
+            image.addEventListener("keydown", function (event) {
+                if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    openLightbox();
+                }
+            });
+        });
+
+        closeButton.addEventListener("click", closeLightbox);
+
+        lightbox.addEventListener("click", function (event) {
+            if (event.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (
+                event.key === "Escape" &&
+                lightbox.classList.contains("active")
+            ) {
+                closeLightbox();
+            }
+        });
+    }
+
+            
+        });
+    }
+    
+
+    // Dynamic product catalogue
+    const productGrid = document.querySelector(".product-grid");
+    const productSearch = document.getElementById("productSearch");
+    const categoryFilter = document.getElementById("categoryFilter");
+    const productSort = document.getElementById("productSort");
+    const productCount = document.getElementById("productCount");
+
+    if (
+        productGrid &&
+        productSearch &&
+        categoryFilter &&
+        productSort &&
+        productCount
+    ) {
+        const productCards = Array.from(
+            productGrid.querySelectorAll(".product-card")
+        );
+
+        function updateProducts() {
+            const searchTerm = productSearch.value
+                .trim()
+                .toLowerCase();
+
+            const selectedCategory = categoryFilter.value;
+            const sortOption = productSort.value;
+
+            const visibleProducts = productCards.filter(function (card) {
+                const matchesSearch = card.textContent
+                    .toLowerCase()
+                    .includes(searchTerm);
+
+                const matchesCategory =
+                    selectedCategory === "all" ||
+                    card.dataset.category === selectedCategory;
+
+                return matchesSearch && matchesCategory;
+            });
+
+            visibleProducts.sort(function (a, b) {
+                if (sortOption === "low-high") {
+                    return Number(a.dataset.price) -
+                        Number(b.dataset.price);
+                }
+
+                if (sortOption === "high-low") {
+                    return Number(b.dataset.price) -
+                        Number(a.dataset.price);
+                }
+
+                if (sortOption === "name") {
+                    return a.textContent.trim().localeCompare(
+                        b.textContent.trim()
+                    );
+                }
+
+                return productCards.indexOf(a) -
+                    productCards.indexOf(b);
+            });
+
+            productCards.forEach(function (card) {
+                card.hidden = !visibleProducts.includes(card);
+            });
+
+            visibleProducts.forEach(function (card) {
+                productGrid.appendChild(card);
+            });
+
+            productCount.textContent =
+                visibleProducts.length +
+                (visibleProducts.length === 1
+                    ? " product found."
+                    : " products found.");
+        }
+
+        productSearch.addEventListener("input", updateProducts);
+        categoryFilter.addEventListener("change", updateProducts);
+        productSort.addEventListener("change", updateProducts);
+
+        updateProducts();
     }
 });
