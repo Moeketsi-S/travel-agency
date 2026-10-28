@@ -140,8 +140,37 @@
 
                 </div>
 
+                <div class="product-controls">
+                    <label for="productSearch">Search products</label>
+                    <input
+                        type="search"
+                        id="productSearch"
+                        placeholder="Search cakes, cupcakes, bread..."
+                    >
 
-                <div class="product-grid">
+                    <label for="categoryFilter">Filter by category</label>
+                    <select id="categoryFilter">
+                        <option value="all">All products</option>
+                        <option value="cakes">Cakes</option>
+                        <option value="cupcakes">Cupcakes</option>
+                        <option value="pastries">Pastries</option>
+                        <option value="bread">Bread</option>
+                        <option value="cookies">Cookies</option>
+                        <option value="treats">Special treats</option>
+                    </select>
+
+                    <label for="productSort">Sort by price</label>
+                    <select id="productSort">
+                        <option value="default">Default order</option>
+                        <option value="low-high">Price: low to high</option>
+                        <option value="high-low">Price: high to low</option>
+                        <option value="name">Name: A to Z</option>
+                    </select>
+
+                    <p id="productCount" aria-live="polite"></p>
+                </div>
+
+                <div class="product-card" data-category="cakes" data-price="350">
 
 
                     <!-- Cakes -->
@@ -179,7 +208,7 @@
 
 
                     <!-- Cupcakes -->
-                    <article class="product-card">
+                    <article class="product-card" data-category="cupcakes" data-price="20">
 
                         <div class="product-icon"
                              aria-hidden="true">
@@ -213,7 +242,7 @@
 
 
                     <!-- Pastries -->
-                    <article class="product-card">
+                    <article class="product-card" data-category="Pastries" data-price="20">
 
                         <div class="product-icon"
                              aria-hidden="true">
@@ -246,7 +275,7 @@
 
 
                     <!-- Bread -->
-                    <article class="product-card">
+                    <article class="product-card" data-category="Bread" data-price="35">
 
                         <div class="product-icon"
                              aria-hidden="true">
@@ -279,7 +308,7 @@
 
 
                     <!-- Cookies -->
-                    <article class="product-card">
+                    <article class="product-card" data-category="cookies" data-price="15">
 
                         <div class="product-icon"
                              aria-hidden="true">
@@ -312,7 +341,7 @@
 
 
                     <!-- Special Treats -->
-                    <article class="product-card">
+                    <article class="product-card" data-category="treats" data-price="30">
 
                         <div class="product-icon"
                              aria-hidden="true">

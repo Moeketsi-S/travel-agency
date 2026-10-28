@@ -1141,3 +1141,53 @@ footer a:hover {
         max-height: 70vh;
     }
 }
+
+/* Product search, filter and sorting controls */
+.product-controls {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem 1rem;
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+    padding: 1.25rem;
+    background: var(--light-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+.product-controls label {
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.product-controls input,
+.product-controls select {
+    width: 100%;
+    min-width: 0;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--white);
+    color: var(--text-color);
+    font: inherit;
+}
+
+.product-controls #productCount {
+    grid-column: 1 / -1;
+    margin: 0;
+    font-weight: 600;
+}
+
+.product-card[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 700px) {
+    .product-controls {
+        grid-template-columns: 1fr;
+    }
+
+    .product-controls #productCount {
+        grid-column: auto;
+    }
+}
