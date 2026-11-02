@@ -69,9 +69,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
      /* ---------- Custom Cake Form Validation ---------- */
 
-    const cakeForm = document.getElementById("cakeEnquiryForm");
+    const cakeEnquiryForm = document.getElementById("cakeEnquiryForm");
 
-    if (cakeForm) {
+    if (cakeEnquiryForm) {
 
         const name = document.getElementById("name");
         const email = document.getElementById("email");
@@ -82,7 +82,17 @@ document.addEventListener("DOMContentLoaded", function () {
         const date = document.getElementById("date");
 
         const formMessage = document.getElementById("formMessage");
+            formMessage.textContent =
+            `Thank you, ${customerName}! Your enquiry for a ${flavour} cake ` +
+            `for ${occasion}, in the ${size} size, requested for ${requestedDate}, ` +
+            `has passed validation. The bakery will need to confirm the final price ` +
+            `and availability before your order can be confirmed.`;
 
+        formMessage.classList.remove("error");
+        formMessage.classList.add("success");
+        formMessage.setAttribute("role", "status");
+    });
+}
 
         function showError(input, errorId, message) {
 
@@ -102,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        cakeForm.addEventListener("submit", function (event) {
+        cakeEnquiryForm.addEventListener("submit", function (event) {
 
             event.preventDefault();
 
