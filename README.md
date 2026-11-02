@@ -79,3 +79,57 @@ References used throughout the project will be added and updated here using the 
 5. Drew, K. (2018) *Baked pastry on bowl*. Unsplash.
    Available at: https://unsplash.com/photos/baked-pastry-on-bowl-n49BjsFf5dI
    (Accessed: 14 August 2026).
+
+   ## Part 3 – Changelog
+
+### Overview
+Part 3 focused on improving the Sweet Crumbs Bakery website by adding interactive functionality, improving user experience, and implementing website optimisation and technical enhancements.
+
+### Changes and Improvements
+
+**1. JavaScript Functionality**
+- Implemented responsive mobile navigation.
+- Added a dynamic copyright year.
+- Added a back-to-top button.
+- Improved website interactivity using JavaScript.
+
+**2. Product Catalogue**
+- Added product search functionality.
+- Implemented category-based filtering.
+- Added product sorting functionality.
+- Added a dynamic product count.
+
+**3. Gallery**
+- Implemented an interactive image lightbox.
+- Added functionality to open and close enlarged gallery images.
+
+**4. FAQ Section**
+- Implemented an interactive accordion.
+- Added expand-and-collapse functionality for frequently asked questions.
+
+**5. Forms and Validation**
+- Improved the custom cake enquiry form with input validation.
+- Added validation and feedback for the contact form.
+- Added a personalised confirmation message for cake enquiries.
+
+**6. Location Functionality**
+- Added browser geolocation functionality.
+- Implemented a Google Maps directions link to the bakery's listed address.
+
+**7. Website Improvements**
+- Improved styling and responsive layouts.
+- Added interactive elements to improve usability.
+- Corrected JavaScript errors and improved code organisation.
+
+### Files Updated
+- `index.html`
+- `products.html`
+- `custom-cakes.html`
+- `gallery.html`
+- `faq.html`
+- `contact.html`
+- `css/style.css`
+- `js/script.js`
+
+### Part 3 Completion
+The website was updated with interactive features, form validation, product catalogue functionality, and user experience improvements. The changes were tested locally to confirm that the implemented features function as expected.
