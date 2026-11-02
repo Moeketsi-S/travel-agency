@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://Moeketsi-S.github.io/travel-agency/Sitemap.xml
